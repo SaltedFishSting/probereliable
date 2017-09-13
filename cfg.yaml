@@ -1,0 +1,21 @@
+gw:
+  addr:                  localhost    ##本门户对外IP
+  httpListenPort:        9233         ##本门户对外端口
+  dbaddr:               "103.25.23.89:60013"
+  dbname:               "dataAnalysis_new"
+  tablename:            "report_summary_tab"
+  tablename2:           "report_tab"
+  
+
+output:
+  prometheus:            false
+  pushGateway:           true
+  pushGatewayAddr:       "localhost:9091"
+  monitorID:             "M2"
+  period:                300 ##秒
+
+  
+p2p:
+  histogramOptsparam:    {"start":0,"width":1.5,"count":2}
+  summaryOptsparam:      {0: 0.05, 0.5: 0.03, 0.9: 0.01, 1: 0.01}
+   
